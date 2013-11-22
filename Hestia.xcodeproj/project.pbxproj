@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC02814317BD37D30062B47D /* IndoorMap_2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CC02814217BD37D30062B47D /* IndoorMap_2.bundle */; };
+		CC02814E17BD6C0C0062B47D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC02814D17BD6C0C0062B47D /* QuartzCore.framework */; };
+		CC02815117BD72B20062B47D /* MapDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC02815017BD72B20062B47D /* MapDisplayView.m */; };
+		CC02815417BD99540062B47D /* karia_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = CC02815217BD99540062B47D /* karia_avatar.png */; };
+		CC02815517BD99540062B47D /* karia_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC02815317BD99540062B47D /* karia_avatar@2x.png */; };
+		CC08256817BC4AC500E6558E /* MovementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC08256617BC4AC500E6558E /* MovementViewController.m */; };
+		CC08256B17BC4C8700E6558E /* IndoorMap_1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CC08256A17BC4C8700E6558E /* IndoorMap_1.bundle */; };
+		CC26E7A817BBF9810015C5A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC26E7A717BBF9810015C5A1 /* Foundation.framework */; };
+		CC26E7AA17BBF9810015C5A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC26E7A917BBF9810015C5A1 /* CoreGraphics.framework */; };
+		CC26E7AC17BBF9810015C5A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC26E7AB17BBF9810015C5A1 /* UIKit.framework */; };
+		CC26E7B217BBF9810015C5A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC26E7B017BBF9810015C5A1 /* InfoPlist.strings */; };
+		CC26E7B417BBF9810015C5A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26E7B317BBF9810015C5A1 /* main.m */; };
+		CC26E7B817BBF9810015C5A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26E7B717BBF9810015C5A1 /* AppDelegate.m */; };
+		CC26E7BB17BBF9810015C5A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC26E7B917BBF9810015C5A1 /* Main.storyboard */; };
+		CC26E7BE17BBF9810015C5A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26E7BD17BBF9810015C5A1 /* ViewController.m */; };
+		CC26E7C017BBF9810015C5A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC26E7BF17BBF9810015C5A1 /* Images.xcassets */; };
+		CC26E7C717BBF9810015C5A1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC26E7C617BBF9810015C5A1 /* XCTest.framework */; };
+		CC26E7C817BBF9810015C5A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC26E7A717BBF9810015C5A1 /* Foundation.framework */; };
+		CC26E7C917BBF9810015C5A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC26E7AB17BBF9810015C5A1 /* UIKit.framework */; };
+		CC26E7D117BBF9810015C5A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC26E7CF17BBF9810015C5A1 /* InfoPlist.strings */; };
+		CC26E7D317BBF9810015C5A1 /* HestiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26E7D217BBF9810015C5A1 /* HestiaTests.m */; };
+		CC26E7DF17BBF9DE0015C5A1 /* NearbyAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26E7DE17BBF9DE0015C5A1 /* NearbyAuthCore.m */; };
+		CC26E7E117BBF9F10015C5A1 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC26E7E017BBF9F10015C5A1 /* CoreBluetooth.framework */; };
+		CC91DFF817BC0467007D5894 /* UsersData.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC91DFF717BC0467007D5894 /* UsersData.plist */; };
+		CC91E00417BC04E9007D5894 /* AGTotp.m in Sources */ = {isa = PBXBuildFile; fileRef = CC91DFFB17BC04E9007D5894 /* AGTotp.m */; };
+		CC91E00517BC04E9007D5894 /* AGOtp.m in Sources */ = {isa = PBXBuildFile; fileRef = CC91DFFD17BC04E9007D5894 /* AGOtp.m */; };
+		CC91E00617BC04E9007D5894 /* AGClock.m in Sources */ = {isa = PBXBuildFile; fileRef = CC91DFFF17BC04E9007D5894 /* AGClock.m */; };
+		CC91E00717BC04E9007D5894 /* AGStringEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = CC91E00117BC04E9007D5894 /* AGStringEncoding.m */; };
+		CC91E00817BC04E9007D5894 /* AGBase32.m in Sources */ = {isa = PBXBuildFile; fileRef = CC91E00317BC04E9007D5894 /* AGBase32.m */; };
+		CC91E01217BC36FE007D5894 /* zelous_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = CC91E01017BC36FE007D5894 /* zelous_avatar.png */; };
+		CC91E01317BC36FE007D5894 /* zelous_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC91E01117BC36FE007D5894 /* zelous_avatar@2x.png */; };
+		CCE3891417BEB90600394DD9 /* IndoorMap_3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CCE3891317BEB90600394DD9 /* IndoorMap_3.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC26E7CA17BBF9810015C5A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC26E79C17BBF9810015C5A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC26E7A317BBF9810015C5A1;
+			remoteInfo = Hestia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC02814217BD37D30062B47D /* IndoorMap_2.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IndoorMap_2.bundle; sourceTree = "<group>"; };
+		CC02814D17BD6C0C0062B47D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CC02814F17BD72B20062B47D /* MapDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDisplayView.h; sourceTree = "<group>"; };
+		CC02815017BD72B20062B47D /* MapDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDisplayView.m; sourceTree = "<group>"; };
+		CC02815217BD99540062B47D /* karia_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = karia_avatar.png; sourceTree = "<group>"; };
+		CC02815317BD99540062B47D /* karia_avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "karia_avatar@2x.png"; sourceTree = "<group>"; };
+		CC08256517BC4AC500E6558E /* MovementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovementViewController.h; sourceTree = "<group>"; };
+		CC08256617BC4AC500E6558E /* MovementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovementViewController.m; sourceTree = "<group>"; };
+		CC08256A17BC4C8700E6558E /* IndoorMap_1.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IndoorMap_1.bundle; sourceTree = "<group>"; };
+		CC26E7A417BBF9810015C5A1 /* hestia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hestia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC26E7A717BBF9810015C5A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CC26E7A917BBF9810015C5A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CC26E7AB17BBF9810015C5A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CC26E7AF17BBF9810015C5A1 /* Hestia-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hestia-Info.plist"; sourceTree = "<group>"; };
+		CC26E7B117BBF9810015C5A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CC26E7B317BBF9810015C5A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC26E7B517BBF9810015C5A1 /* Hestia-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hestia-Prefix.pch"; sourceTree = "<group>"; };
+		CC26E7B617BBF9810015C5A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CC26E7B717BBF9810015C5A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CC26E7BA17BBF9810015C5A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC26E7BC17BBF9810015C5A1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CC26E7BD17BBF9810015C5A1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CC26E7BF17BBF9810015C5A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CC26E7C517BBF9810015C5A1 /* HestiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HestiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC26E7C617BBF9810015C5A1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CC26E7CE17BBF9810015C5A1 /* HestiaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HestiaTests-Info.plist"; sourceTree = "<group>"; };
+		CC26E7D017BBF9810015C5A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CC26E7D217BBF9810015C5A1 /* HestiaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HestiaTests.m; sourceTree = "<group>"; };
+		CC26E7DD17BBF9DE0015C5A1 /* NearbyAuthCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyAuthCore.h; sourceTree = "<group>"; };
+		CC26E7DE17BBF9DE0015C5A1 /* NearbyAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyAuthCore.m; sourceTree = "<group>"; };
+		CC26E7E017BBF9F10015C5A1 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		CC87E26817BDD54300C12B80 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		CC87E26A17BDD54900C12B80 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		CC87E26C17BDD55100C12B80 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		CC87E26E17BDD55900C12B80 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CC91DFF717BC0467007D5894 /* UsersData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UsersData.plist; sourceTree = "<group>"; };
+		CC91DFF917BC04E9007D5894 /* AeroGearOTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AeroGearOTP.h; sourceTree = "<group>"; };
+		CC91DFFA17BC04E9007D5894 /* AGTotp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTotp.h; sourceTree = "<group>"; };
+		CC91DFFB17BC04E9007D5894 /* AGTotp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTotp.m; sourceTree = "<group>"; };
+		CC91DFFC17BC04E9007D5894 /* AGOtp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGOtp.h; sourceTree = "<group>"; };
+		CC91DFFD17BC04E9007D5894 /* AGOtp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGOtp.m; sourceTree = "<group>"; };
+		CC91DFFE17BC04E9007D5894 /* AGClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGClock.h; sourceTree = "<group>"; };
+		CC91DFFF17BC04E9007D5894 /* AGClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGClock.m; sourceTree = "<group>"; };
+		CC91E00017BC04E9007D5894 /* AGStringEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGStringEncoding.h; sourceTree = "<group>"; };
+		CC91E00117BC04E9007D5894 /* AGStringEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGStringEncoding.m; sourceTree = "<group>"; };
+		CC91E00217BC04E9007D5894 /* AGBase32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGBase32.h; sourceTree = "<group>"; };
+		CC91E00317BC04E9007D5894 /* AGBase32.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGBase32.m; sourceTree = "<group>"; };
+		CC91E01017BC36FE007D5894 /* zelous_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zelous_avatar.png; sourceTree = "<group>"; };
+		CC91E01117BC36FE007D5894 /* zelous_avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zelous_avatar@2x.png"; sourceTree = "<group>"; };
+		CCE3891317BEB90600394DD9 /* IndoorMap_3.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IndoorMap_3.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC26E7A117BBF9810015C5A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC02814E17BD6C0C0062B47D /* QuartzCore.framework in Frameworks */,
+				CC26E7E117BBF9F10015C5A1 /* CoreBluetooth.framework in Frameworks */,
+				CC26E7AA17BBF9810015C5A1 /* CoreGraphics.framework in Frameworks */,
+				CC26E7AC17BBF9810015C5A1 /* UIKit.framework in Frameworks */,
+				CC26E7A817BBF9810015C5A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC26E7C217BBF9810015C5A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC26E7C717BBF9810015C5A1 /* XCTest.framework in Frameworks */,
+				CC26E7C917BBF9810015C5A1 /* UIKit.framework in Frameworks */,
+				CC26E7C817BBF9810015C5A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC02815617BD99590062B47D /* UsersAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				CC91E01017BC36FE007D5894 /* zelous_avatar.png */,
+				CC91E01117BC36FE007D5894 /* zelous_avatar@2x.png */,
+				CC02815217BD99540062B47D /* karia_avatar.png */,
+				CC02815317BD99540062B47D /* karia_avatar@2x.png */,
+			);
+			name = UsersAvatar;
+			sourceTree = "<group>";
+		};
+		CC26E79B17BBF9810015C5A1 = {
+			isa = PBXGroup;
+			children = (
+				CC26E7AD17BBF9810015C5A1 /* Hestia */,
+				CC26E7CC17BBF9810015C5A1 /* HestiaTests */,
+				CC26E7A617BBF9810015C5A1 /* Frameworks */,
+				CC26E7A517BBF9810015C5A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC26E7A517BBF9810015C5A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC26E7A417BBF9810015C5A1 /* hestia.app */,
+				CC26E7C517BBF9810015C5A1 /* HestiaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC26E7A617BBF9810015C5A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC87E26E17BDD55900C12B80 /* AVFoundation.framework */,
+				CC87E26C17BDD55100C12B80 /* OpenGLES.framework */,
+				CC87E26A17BDD54900C12B80 /* CoreVideo.framework */,
+				CC87E26817BDD54300C12B80 /* CoreMedia.framework */,
+				CC02814D17BD6C0C0062B47D /* QuartzCore.framework */,
+				CC26E7E017BBF9F10015C5A1 /* CoreBluetooth.framework */,
+				CC26E7A717BBF9810015C5A1 /* Foundation.framework */,
+				CC26E7A917BBF9810015C5A1 /* CoreGraphics.framework */,
+				CC26E7AB17BBF9810015C5A1 /* UIKit.framework */,
+				CC26E7C617BBF9810015C5A1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC26E7AD17BBF9810015C5A1 /* Hestia */ = {
+			isa = PBXGroup;
+			children = (
+				CC26E7DC17BBF9960015C5A1 /* Cores */,
+				CC26E7B617BBF9810015C5A1 /* AppDelegate.h */,
+				CC26E7B717BBF9810015C5A1 /* AppDelegate.m */,
+				CC02814F17BD72B20062B47D /* MapDisplayView.h */,
+				CC02815017BD72B20062B47D /* MapDisplayView.m */,
+				CC08256517BC4AC500E6558E /* MovementViewController.h */,
+				CC08256617BC4AC500E6558E /* MovementViewController.m */,
+				CC26E7B917BBF9810015C5A1 /* Main.storyboard */,
+				CC26E7BC17BBF9810015C5A1 /* ViewController.h */,
+				CC26E7BD17BBF9810015C5A1 /* ViewController.m */,
+				CC26E7BF17BBF9810015C5A1 /* Images.xcassets */,
+				CC26E7AE17BBF9810015C5A1 /* Supporting Files */,
+			);
+			path = Hestia;
+			sourceTree = "<group>";
+		};
+		CC26E7AE17BBF9810015C5A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCE3891317BEB90600394DD9 /* IndoorMap_3.bundle */,
+				CC02814217BD37D30062B47D /* IndoorMap_2.bundle */,
+				CC08256A17BC4C8700E6558E /* IndoorMap_1.bundle */,
+				CC02815617BD99590062B47D /* UsersAvatar */,
+				CC26E7AF17BBF9810015C5A1 /* Hestia-Info.plist */,
+				CC26E7B017BBF9810015C5A1 /* InfoPlist.strings */,
+				CC26E7B317BBF9810015C5A1 /* main.m */,
+				CC26E7B517BBF9810015C5A1 /* Hestia-Prefix.pch */,
+				CC91DFF717BC0467007D5894 /* UsersData.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC26E7CC17BBF9810015C5A1 /* HestiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC26E7D217BBF9810015C5A1 /* HestiaTests.m */,
+				CC26E7CD17BBF9810015C5A1 /* Supporting Files */,
+			);
+			path = HestiaTests;
+			sourceTree = "<group>";
+		};
+		CC26E7CD17BBF9810015C5A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC26E7CE17BBF9810015C5A1 /* HestiaTests-Info.plist */,
+				CC26E7CF17BBF9810015C5A1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC26E7DC17BBF9960015C5A1 /* Cores */ = {
+			isa = PBXGroup;
+			children = (
+				CC91E00917BC04F6007D5894 /* OTP */,
+				CC26E7DD17BBF9DE0015C5A1 /* NearbyAuthCore.h */,
+				CC26E7DE17BBF9DE0015C5A1 /* NearbyAuthCore.m */,
+			);
+			name = Cores;
+			sourceTree = "<group>";
+		};
+		CC91E00917BC04F6007D5894 /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				CC91DFF917BC04E9007D5894 /* AeroGearOTP.h */,
+				CC91DFFA17BC04E9007D5894 /* AGTotp.h */,
+				CC91DFFB17BC04E9007D5894 /* AGTotp.m */,
+				CC91DFFC17BC04E9007D5894 /* AGOtp.h */,
+				CC91DFFD17BC04E9007D5894 /* AGOtp.m */,
+				CC91DFFE17BC04E9007D5894 /* AGClock.h */,
+				CC91DFFF17BC04E9007D5894 /* AGClock.m */,
+				CC91E00017BC04E9007D5894 /* AGStringEncoding.h */,
+				CC91E00117BC04E9007D5894 /* AGStringEncoding.m */,
+				CC91E00217BC04E9007D5894 /* AGBase32.h */,
+				CC91E00317BC04E9007D5894 /* AGBase32.m */,
+			);
+			name = OTP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC26E7A317BBF9810015C5A1 /* hestia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC26E7D617BBF9810015C5A1 /* Build configuration list for PBXNativeTarget "hestia" */;
+			buildPhases = (
+				CC26E7A017BBF9810015C5A1 /* Sources */,
+				CC26E7A117BBF9810015C5A1 /* Frameworks */,
+				CC26E7A217BBF9810015C5A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hestia;
+			productName = Hestia;
+			productReference = CC26E7A417BBF9810015C5A1 /* hestia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC26E7C417BBF9810015C5A1 /* HestiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC26E7D917BBF9810015C5A1 /* Build configuration list for PBXNativeTarget "HestiaTests" */;
+			buildPhases = (
+				CC26E7C117BBF9810015C5A1 /* Sources */,
+				CC26E7C217BBF9810015C5A1 /* Frameworks */,
+				CC26E7C317BBF9810015C5A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC26E7CB17BBF9810015C5A1 /* PBXTargetDependency */,
+			);
+			name = HestiaTests;
+			productName = HestiaTests;
+			productReference = CC26E7C517BBF9810015C5A1 /* HestiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC26E79C17BBF9810015C5A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Oltica;
+				TargetAttributes = {
+					CC26E7A317BBF9810015C5A1 = {
+						DevelopmentTeam = 7C2EXSD3YV;
+					};
+					CC26E7C417BBF9810015C5A1 = {
+						TestTargetID = CC26E7A317BBF9810015C5A1;
+					};
+				};
+			};
+			buildConfigurationList = CC26E79F17BBF9810015C5A1 /* Build configuration list for PBXProject "Hestia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC26E79B17BBF9810015C5A1;
+			productRefGroup = CC26E7A517BBF9810015C5A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC26E7A317BBF9810015C5A1 /* hestia */,
+				CC26E7C417BBF9810015C5A1 /* HestiaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC26E7A217BBF9810015C5A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC02815517BD99540062B47D /* karia_avatar@2x.png in Resources */,
+				CC02815417BD99540062B47D /* karia_avatar.png in Resources */,
+				CC26E7C017BBF9810015C5A1 /* Images.xcassets in Resources */,
+				CC91E01217BC36FE007D5894 /* zelous_avatar.png in Resources */,
+				CC91DFF817BC0467007D5894 /* UsersData.plist in Resources */,
+				CCE3891417BEB90600394DD9 /* IndoorMap_3.bundle in Resources */,
+				CC91E01317BC36FE007D5894 /* zelous_avatar@2x.png in Resources */,
+				CC02814317BD37D30062B47D /* IndoorMap_2.bundle in Resources */,
+				CC26E7B217BBF9810015C5A1 /* InfoPlist.strings in Resources */,
+				CC26E7BB17BBF9810015C5A1 /* Main.storyboard in Resources */,
+				CC08256B17BC4C8700E6558E /* IndoorMap_1.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC26E7C317BBF9810015C5A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC26E7D117BBF9810015C5A1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC26E7A017BBF9810015C5A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC91E00617BC04E9007D5894 /* AGClock.m in Sources */,
+				CC26E7BE17BBF9810015C5A1 /* ViewController.m in Sources */,
+				CC26E7B817BBF9810015C5A1 /* AppDelegate.m in Sources */,
+				CC91E00717BC04E9007D5894 /* AGStringEncoding.m in Sources */,
+				CC02815117BD72B20062B47D /* MapDisplayView.m in Sources */,
+				CC26E7B417BBF9810015C5A1 /* main.m in Sources */,
+				CC91E00517BC04E9007D5894 /* AGOtp.m in Sources */,
+				CC91E00417BC04E9007D5894 /* AGTotp.m in Sources */,
+				CC08256817BC4AC500E6558E /* MovementViewController.m in Sources */,
+				CC26E7DF17BBF9DE0015C5A1 /* NearbyAuthCore.m in Sources */,
+				CC91E00817BC04E9007D5894 /* AGBase32.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC26E7C117BBF9810015C5A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC26E7D317BBF9810015C5A1 /* HestiaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC26E7CB17BBF9810015C5A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC26E7A317BBF9810015C5A1 /* hestia */;
+			targetProxy = CC26E7CA17BBF9810015C5A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC26E7B017BBF9810015C5A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC26E7B117BBF9810015C5A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CC26E7B917BBF9810015C5A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC26E7BA17BBF9810015C5A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC26E7CF17BBF9810015C5A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC26E7D017BBF9810015C5A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC26E7D417BBF9810015C5A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		CC26E7D517BBF9810015C5A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC26E7D717BBF9810015C5A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tian Zhang (9U3G757R4G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tian Zhang (9U3G757R4G)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hestia/Hestia-Prefix.pch";
+				INFOPLIST_FILE = "Hestia/Hestia-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CC26E7D817BBF9810015C5A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tian Zhang (9U3G757R4G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tian Zhang (9U3G757R4G)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hestia/Hestia-Prefix.pch";
+				INFOPLIST_FILE = "Hestia/Hestia-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CC26E7DA17BBF9810015C5A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hestia.app/Hestia";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hestia/Hestia-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HestiaTests/HestiaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CC26E7DB17BBF9810015C5A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hestia.app/Hestia";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hestia/Hestia-Prefix.pch";
+				INFOPLIST_FILE = "HestiaTests/HestiaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC26E79F17BBF9810015C5A1 /* Build configuration list for PBXProject "Hestia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC26E7D417BBF9810015C5A1 /* Debug */,
+				CC26E7D517BBF9810015C5A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC26E7D617BBF9810015C5A1 /* Build configuration list for PBXNativeTarget "hestia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC26E7D717BBF9810015C5A1 /* Debug */,
+				CC26E7D817BBF9810015C5A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC26E7D917BBF9810015C5A1 /* Build configuration list for PBXNativeTarget "HestiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC26E7DA17BBF9810015C5A1 /* Debug */,
+				CC26E7DB17BBF9810015C5A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC26E79C17BBF9810015C5A1 /* Project object */;
+}

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="13A538g" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="bGl-on-Lvq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+    </dependencies>
+    <scenes>
+        <!--Movement View Controller-->
+        <scene sceneID="qhM-KT-A83">
+            <objects>
+                <viewController id="bGl-on-Lvq" customClass="MovementViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HT7-B7-NfI"/>
+                        <viewControllerLayoutGuide type="bottom" id="UZn-2O-pk0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oyr-He-ja2">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJC-6f-wUO">
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="C5E-Xz-LWD"/>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAQ-ay-ejW">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-xZ-Hi5">
+                                <rect key="frame" x="374" y="966" width="20" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="lock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressLockButton:" destination="bGl-on-Lvq" eventType="touchUpInside" id="7UV-wl-CSl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SJC-6f-wUO" secondAttribute="trailing" id="09A-JE-vF3"/>
+                            <constraint firstAttribute="trailing" secondItem="qAQ-ay-ejW" secondAttribute="trailing" id="Wrx-rp-gaL"/>
+                            <constraint firstItem="qAQ-ay-ejW" firstAttribute="leading" secondItem="oyr-He-ja2" secondAttribute="leading" id="Z6c-bd-jHl"/>
+                            <constraint firstItem="SJC-6f-wUO" firstAttribute="leading" secondItem="oyr-He-ja2" secondAttribute="leading" id="keB-RC-YiC"/>
+                            <constraint firstItem="UZn-2O-pk0" firstAttribute="top" secondItem="cQb-xZ-Hi5" secondAttribute="bottom" constant="30" id="kp8-XF-0YS"/>
+                            <constraint firstItem="SJC-6f-wUO" firstAttribute="top" secondItem="oyr-He-ja2" secondAttribute="top" constant="20" id="lco-Bw-Cbm"/>
+                            <constraint firstItem="qAQ-ay-ejW" firstAttribute="centerX" secondItem="cQb-xZ-Hi5" secondAttribute="centerX" id="nH3-29-01a"/>
+                            <constraint firstItem="UZn-2O-pk0" firstAttribute="top" secondItem="qAQ-ay-ejW" secondAttribute="bottom" id="pP3-EF-dcW"/>
+                            <constraint firstItem="qAQ-ay-ejW" firstAttribute="top" secondItem="SJC-6f-wUO" secondAttribute="bottom" id="yN7-0m-A2m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lockButton" destination="cQb-xZ-Hi5" id="fyg-BA-6MF"/>
+                        <outlet property="mapScrollerView" destination="qAQ-ay-ejW" id="k5R-FX-Xsc"/>
+                        <outlet property="titleNavigationBar" destination="SJC-6f-wUO" id="Nvc-Lk-xZ0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ac-Zh-tqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1237" y="-576"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="UserInteractVC" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IW5-Zn-1AI"/>
+                        <viewControllerLayoutGuide type="bottom" id="fGb-EG-O9c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Dv-TB-184">
+                                <rect key="frame" x="309" y="329" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="8xc-4J-eJd"/>
+                                    <constraint firstAttribute="height" constant="150" id="urv-OG-gjK"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ger-qh-oV5">
+                                <rect key="frame" x="300" y="616" width="168" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Automatically Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="authWithOTP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zAV-Xj-Vte"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLW-nK-Xe5">
+                                <rect key="frame" x="320" y="660" width="129" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Manually Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="authWithPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FjU-OP-NE7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjy-el-0eC">
+                                <rect key="frame" x="20" y="40" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissAuthView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ChZ-Jv-JVP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7W-sa-29u">
+                                <rect key="frame" x="309" y="523" width="151" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DLW-nK-Xe5" firstAttribute="top" secondItem="ger-qh-oV5" secondAttribute="bottom" constant="8" id="0Kf-x4-a68"/>
+                            <constraint firstAttribute="centerY" secondItem="0Dv-TB-184" secondAttribute="centerY" constant="108" id="5Qw-GI-f87"/>
+                            <constraint firstItem="pjy-el-0eC" firstAttribute="top" secondItem="IW5-Zn-1AI" secondAttribute="bottom" constant="20" id="Z4s-OF-e25"/>
+                            <constraint firstAttribute="centerX" secondItem="0Dv-TB-184" secondAttribute="centerX" id="cn0-RP-pBJ"/>
+                            <constraint firstAttribute="centerX" secondItem="w7W-sa-29u" secondAttribute="centerX" constant="-0.5" id="dMo-2H-px0"/>
+                            <constraint firstItem="pjy-el-0eC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="dpb-iP-fY9"/>
+                            <constraint firstAttribute="centerX" secondItem="ger-qh-oV5" secondAttribute="centerX" id="gZW-XO-qsj"/>
+                            <constraint firstItem="ger-qh-oV5" firstAttribute="centerX" secondItem="DLW-nK-Xe5" secondAttribute="centerX" constant="-0.5" id="irP-W1-KPF"/>
+                            <constraint firstItem="ger-qh-oV5" firstAttribute="top" secondItem="0Dv-TB-184" secondAttribute="bottom" constant="137" id="o2R-MH-1zf"/>
+                            <constraint firstItem="w7W-sa-29u" firstAttribute="top" secondItem="0Dv-TB-184" secondAttribute="bottom" constant="44" id="uoV-ZH-h9a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avatarView" destination="0Dv-TB-184" id="zQj-ba-1E8"/>
+                        <outlet property="otpAuthButton" destination="ger-qh-oV5" id="8JA-WR-FDR"/>
+                        <outlet property="passwordAuthButton" destination="DLW-nK-Xe5" id="mcq-rp-UP8"/>
+                        <outlet property="welcomeLabel" destination="w7W-sa-29u" id="vgd-bN-OeW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="-336"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="28" height="28"/>
+        <image name="lock" width="20" height="28"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

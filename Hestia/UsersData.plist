@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FBA62925-9AB4-4CBA-8998-AA9116A768B0</key>
+	<dict>
+		<key>name</key>
+		<string>Karia</string>
+		<key>avatar</key>
+		<string>karia_avatar.png</string>
+		<key>otpSec</key>
+		<string>CA374TNIQ3HKC446</string>
+		<key>password</key>
+		<string>123456</string>
+	</dict>
+	<key>7219480F-90F9-4663-8491-0282CE8E8D0E</key>
+	<dict>
+		<key>name</key>
+		<string>Zelous</string>
+		<key>avatar</key>
+		<string>zelous_avatar.png</string>
+		<key>otpSec</key>
+		<string>B2374TNIQ3HKC446</string>
+		<key>password</key>
+		<string>a123456</string>
+	</dict>
+</dict>
+</plist>
