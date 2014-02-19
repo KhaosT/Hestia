@@ -10,6 +10,8 @@
 #import "MapDisplayView.h"
 #import "NearbyAuthCore.h"
 #import "ViewController.h"
+#import "AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 
 #define PENDING_HEIGHT 50.0
 
@@ -32,6 +34,8 @@
     BOOL                _userDismissed;
     
     NSTimer             *_disconnectTimer;
+    
+    NSTimer             *_updateTimer;
 }
 @end
 
@@ -87,46 +91,60 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dismissAuthView:) name:@"UserDismissAuthViewController" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didDisconnectedFromUserDevice:) name:@"DidDisconnectedFromUserDevice" object:nil];
     
-    _UserDidChangePosition = [[NSNotificationCenter defaultCenter]addObserverForName:@"UserDidChangePosition" object:nil queue:[[NSOperationQueue alloc]init] usingBlock:^(NSNotification *note) {
-        NSDictionary *userLocation = note.object;
-        NSBundle *mapInfoBundle = [NSBundle bundleWithURL:[[NSBundle mainBundle]URLForResource:@"IndoorMap_3" withExtension:@"bundle"]];
-        
-        if (!_currentMapInfo) {
-            NSDictionary *mapInfo = [NSDictionary dictionaryWithContentsOfURL:[mapInfoBundle URLForResource:@"info" withExtension:@"plist"]];
-            _currentMapInfo = mapInfo;
-        }
-        if (_currentMapNo) {
-            if (![[userLocation objectForKey:@"major"]isEqualToString:_currentMapNo]) {
-                _currentMapNo = [[_currentMapInfo objectForKey:@"major"]stringValue];
-                [self setupMapForMajor:_currentMapNo];
-            }
-        }else{
-            _currentMapNo = [[_currentMapInfo objectForKey:@"major"]stringValue];
-            [self setupMapForMajor:_currentMapNo];
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [UIView animateWithDuration:0.33 animations:^{
-                if ([[userLocation objectForKey:@"major"] isEqualToString:_currentMapNo]) {
-                    UIImageView *pinView = [_pinsOnScreen objectForKey:[userLocation objectForKey:@"uuid"]];
-                    if (pinView == nil) {
-                        UIImage *locationPinImage = [UIImage imageNamed:[[[[NearbyAuthCore defaultCore]usersData] objectForKey:[userLocation objectForKey:@"uuid"]] objectForKey:@"avatar"]];
-                        pinView = [[UIImageView alloc]initWithImage:locationPinImage];
-                        pinView.frame = CGRectMake(0, 0, 50, 50);
-                        [_mapView addSubview:pinView];
-                        [_pinsOnScreen setObject:pinView forKey:[userLocation objectForKey:@"uuid"]];
-                    }
-                    pinView.center = [self calculateUserLocationWithMajor:[userLocation objectForKey:@"major"] Minor:[userLocation objectForKey:@"minor"]];
-                }else{
-                    UIImageView *pinView = [_pinsOnScreen objectForKey:[userLocation objectForKey:@"uuid"]];
-                    if (pinView) {
-                        [pinView removeFromSuperview];
-                        [_pinsOnScreen removeObjectForKey:[userLocation objectForKey:@"uuid"]];
-                    }
-                }
-            }];
-        });
-    }];
-	// Do any additional setup after loading the view.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        _updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateInformation) userInfo:nil repeats:YES];
+    });
+    // Do any additional setup after loading the view.
+}
+
+- (void)updateInformation
+{
+    /*AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"NULL" parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             NSDictionary *userInfo = responseObject;
+             [userInfo enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+                 NSBundle *mapInfoBundle = [NSBundle bundleWithURL:[[NSBundle mainBundle]URLForResource:@"IndoorMap_3" withExtension:@"bundle"]];
+                 
+                 if (!_currentMapInfo) {
+                     NSDictionary *mapInfo = [NSDictionary dictionaryWithContentsOfURL:[mapInfoBundle URLForResource:@"info" withExtension:@"plist"]];
+                     _currentMapInfo = mapInfo;
+                 }
+                 if (_currentMapNo) {
+                     if (![[obj objectForKey:@"major"]isEqualToString:_currentMapNo]) {
+                         _currentMapNo = [[_currentMapInfo objectForKey:@"major"]stringValue];
+                         [self setupMapForMajor:_currentMapNo];
+                     }
+                 }else{
+                     _currentMapNo = [[_currentMapInfo objectForKey:@"major"]stringValue];
+                     [self setupMapForMajor:_currentMapNo];
+                 }
+                 dispatch_async(dispatch_get_main_queue(), ^{
+                     [UIView animateWithDuration:0.33 animations:^{
+                         if ([[obj objectForKey:@"major"] isEqualToString:_currentMapNo]) {
+                             UIImageView *pinView = [_pinsOnScreen objectForKey:key];
+                             if (pinView == nil) {
+                                 pinView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+                                 [pinView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"NULL",key]]];
+                                 pinView.backgroundColor = [UIColor clearColor];
+                                 [_mapView addSubview:pinView];
+                                 [_pinsOnScreen setObject:pinView forKey:key];
+                             }
+                             pinView.center = [self calculateUserLocationWithMajor:[obj objectForKey:@"major"] Minor:[obj objectForKey:@"minor"]];
+                         }else{
+                             UIImageView *pinView = [_pinsOnScreen objectForKey:key];
+                             if (pinView) {
+                                 [pinView removeFromSuperview];
+                                 [_pinsOnScreen removeObjectForKey:key];
+                             }
+                         }
+                     }];
+                 });
+             }];
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             
+         }];*/
 }
 
 - (void)didFindNewUser:(NSNotification *)note

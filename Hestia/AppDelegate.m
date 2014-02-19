@@ -16,8 +16,6 @@
     NSLog(@"%@",launchOptions);
     [NearbyAuthCore defaultCore];
     
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert)];
-    
     // Override point for customization after application launch.
     return YES;
 }

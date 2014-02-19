@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>878890B2-AC23-4B38-BF9E-B8F2D05262FA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Hestia</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D1223F68-F55D-4114-8DBD-91EDD629E813</key>
+		<string>https://github.com/KhaosT/Hestia.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hestia.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D1223F68-F55D-4114-8DBD-91EDD629E813</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/KhaosT/Hestia.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D1223F68-F55D-4114-8DBD-91EDD629E813</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D1223F68-F55D-4114-8DBD-91EDD629E813</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Hestia</string>
+		</dict>
+	</array>
+</dict>
+</plist>
